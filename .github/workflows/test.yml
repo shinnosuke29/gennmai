@@ -1,0 +1,23 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Run numstats command tests
+        run: |
+          echo -e "10\n20\n30" | python3 scripts/numstats.py --sum | grep "Sum: 60.0"
+          echo -e "10\n20\n30" | python3 scripts/numstats.py --avg | grep "Average: 20.00"
