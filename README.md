@@ -21,13 +21,13 @@
 ### 1. GitHub からリポジトリをクローン
 
 ```bash
-git clone https://github.com/shinnosuke29/gennmai.git
+git clone https://github.com/shinnosuke29/numstats.git
 ```
 
 ### 2. リポジトリへ移動
 
 ```bash
-cd gennmai
+cd numstats
 ```
 
 ### 3. スクリプト実行環境の確認
