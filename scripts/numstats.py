@@ -10,7 +10,7 @@ def calculate_stats(numbers, args):
     if args.sum:
         print(f"Sum: {sum(numbers)}")
     if args.avg:
-        print(f"Average: {statistics.mean(numbers):.2f}")
+        print(f"Average: {sum(numbers)/len(numbers):.2f}")
     if args.max:
         print(f"Max: {max(numbers)}")
     if args.min:
@@ -31,6 +31,10 @@ def main():
 
     args = parser.parse_args()
     input_text = sys.stdin.read().strip()
+
+    if not input_text:
+        print("Error: No input provided.", file=sys.stderr)
+        sys.exit(1)
 
     try:
         numbers = [float(num) for num in input_text.split()]
