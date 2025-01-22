@@ -11,13 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.8'
 
-      - name: Run numstats command tests
+      - name: Install dependencies
+        run: pip install -r requirements.txt || true
+
+      - name: Run Tests
         run: |
-          echo -e "10\n20\n30" | python3 scripts/numstats.py --sum | grep "Sum: 60.0"
-          echo -e "10\n20\n30" | python3 scripts/numstats.py --avg | grep "Average: 20.00"
+          echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std | grep "Sum: 150.0"
+          echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --avg | grep "Average: 30.00"
