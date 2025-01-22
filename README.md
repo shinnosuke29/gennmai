@@ -43,6 +43,17 @@ python3 --version
 ```bash
 echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
 ```
+### 実行例
+
+```bash
+$ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max >
+Sum: 150.0
+Average: 30.00
+Max: 50.0
+Min: 10.0
+Median: 30.0
+Standard Deviation: 14.14
+```
 
 ---
 
@@ -56,28 +67,6 @@ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --m
 - **最小値（min）**
 - **中央値（median）**
 - **標準偏差（standard deviation）**
-
----
-
-## 使い方
-
-1. 数値を標準入力として渡し、各統計情報を出力：
-
-```bash
-echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
-```
-
-### 実行例
-
-```bash
-$ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
-Sum: 150.0
-Average: 30.00
-Max: 50.0
-Min: 10.0
-Median: 30.0
-Standard Deviation: 14.14
-```
 
 ---
 
