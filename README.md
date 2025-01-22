@@ -1,3 +1,17 @@
+# numstats コマンド
+
+**License: BSD 3-Clause IC**
+
+こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学の課題1用のリポジトリです。
+
+---
+
+## 使用言語
+
+- Python
+
+---
+
 ## リポジトリの概要
 
 ### `numstats.py`
@@ -8,29 +22,31 @@
 
 ## リポジトリの使用方法
 
-1. **GitHub からリポジトリをクローン**
+### 1. GitHub からリポジトリをクローン
 
-    ```bash
-    git clone https://github.com/shinnosuke29/gennmai.git
-    ```
+```bash
+git clone https://github.com/shinnosuke29/gennmai.git
+```
 
-2. **リポジトリへ移動**
+### 2. リポジトリへ移動
 
-    ```bash
-    cd gennmai
-    ```
+```bash
+cd gennmai
+```
 
-3. **スクリプト実行環境の確認**
+### 3. スクリプト実行環境の確認
 
-    ```bash
-    python3 --version
-    ```
+```bash
+python3 --version
+```
 
-4. **スクリプトを実行**
+### 4. スクリプトを実行
 
-    ```bash
-    python3 scripts/numstats.py --sum --avg --max --min --median --std
-    ```
+以下のように標準入力から数値を渡して実行してください。
+
+```bash
+echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
+```
 
 ---
 
@@ -38,34 +54,34 @@
 
 標準入力から数値を受け取り、以下の統計情報を出力します：
 
-- **合計（sum）**  
-- **平均（average）**  
-- **最大値（max）**  
-- **最小値（min）**  
-- **中央値（median）**  
+- **合計（sum）**
+- **平均（average）**
+- **最大値（max）**
+- **最小値（min）**
+- **中央値（median）**
 - **標準偏差（standard deviation）**
 
 ---
 
 ## 使い方
 
-1. `numstats.py` を実行：
+1. 数値を標準入力として渡し、各統計情報を出力：
 
-    ```bash
-    python3 scripts/numstats.py --sum --avg --max --min --median --std
-    ```
+```bash
+echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
+```
 
-2. 実行例：
+### 実行例
 
-    ```bash
-    $ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
-    Sum: 150.0
-    Average: 30.00
-    Max: 50.0
-    Min: 10.0
-    Median: 30.0
-    Standard Deviation: 14.14
-    ```
+```bash
+$ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --min --median --std
+Sum: 150.0
+Average: 30.00
+Max: 50.0
+Min: 10.0
+Median: 30.0
+Standard Deviation: 14.14
+```
 
 ---
 
@@ -85,5 +101,6 @@
 
 ## LICENSE
 
-- このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
+- このソフトウェアパッケージは、BSD 3-Clause ICライセンスの下、再頒布および使用が許可されます。
+
 - © 2024 Shinnosuke
