@@ -46,7 +46,6 @@ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max --m
 ### 実行例
 
 ```bash
-$ echo -e "10\n20\n30\n40\n50" | python3 scripts/numstats.py --sum --avg --max >
 Sum: 150.0
 Average: 30.00
 Max: 50.0
