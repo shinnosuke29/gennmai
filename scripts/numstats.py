@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+# (c) 2024 Shinnosuke
+
 import sys
 import argparse
 import statistics
